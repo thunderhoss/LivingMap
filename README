@@ -1,2 +1,8 @@
-LivingMap
-=========
+Code which supports the Living Map - powered by Arduino and HERE maps.  For more details see www.gt140.co.uk
+
+The Living Map is an Arduino project which displays traffic conditions on the M60 (Manchester UK) using RGB LEDs (WS2801).
+
+arduino/living_map.ino - the main Arduino code.  Uses an Ethernet Shield to retrieve information from the php pages.  Uses EasyTransfer library to call a second Arduino with a Sound Shield attached.
+arduino/audio_slave.ino - the slave code which runs on the second Arduino and plays sounds using the Sound Shield.
+php/living_map.php - php which retrieves information from the HERE Maps API and reformats it for easy consumption by an Arduino.
+php/twitter_mentions.php - php which retrieves the last mention on Twitter for a given account (uses TwitterExchange.php) and reformats it for easy consumption by an Arduino.
